@@ -1,30 +1,41 @@
 
 	    ::-webkit-input-placeholder { /* WebKit browsers */
-	    color:    #777;
+	       color: #555555;
+           font-weight: 100;
+           /*font-size:12px;*/
 		}
 		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-		    color:    #777;
-		}
+		    color: #555555;	
+            font-weight: 100;	
+        }
 		::-moz-placeholder { /* Mozilla Firefox 19+ */
-		    color:    #777;
+		    color: #555555;
+            font-weight: 100;
 		}
 		:-ms-input-placeholder { /* Internet Explorer 10+ */
-		    color:    #777;
+		    color: #555555;
+            font-weight: 100;
 		}
-    	body {
+
+    	html, body {
     		/*background-color: rgb(246, 246, 246);*/
     		background-color: #F6F6F6;
-    		font-family: Arial;
-            color: #333333;
+    		font-family: Verdana, sans-serif;
+            color: #222222;
+            border: 0px;
+            letter-spacing: 0.02em;
+            font-weight: 300;
     	}
 
-        p{
+        p, ul, li, div, section, a, span, nav{
             margin: 0;
+            padding: 0;
         }
+
 
     	a{
     		text-decoration: none;
-    		color: #5E7D9D;
+    		color: #5E7D9D; /*light blue*/
     	}
 
     	a:hover{color: #2E4E6E;}
@@ -35,12 +46,14 @@
     		background-color: #FFFFFF;
     		border: 1px solid #DFDFDF;
             border-radius: 4px;
-    		color: #555555;
     		font-size: 11px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     	}
 
     	.main-page{
-    		margin: 1% 2.5%;
+    		margin: 1.6% 3%;
     		overflow: hidden;
     	}
 
@@ -56,7 +69,11 @@
 
     	}
 
-    	nav ul{
+        nav p > img{
+            margin-bottom: -4px;
+        }
+
+    	nav > ul{
     		list-style-type: none;
     		display: inline-block;
     		float: left;
@@ -64,58 +81,112 @@
     		width: 72%;
     	}
 
-    	nav li{
+    	nav > ul > li{
     		display: inline-block;
-    		margin-right: 10px;
+    		margin-right: 0.6%;
     		margin-bottom: 2px;
-    		padding: 6px;
-    		border-radius: 4px;
+    		padding: 0px 6px 6px 6px;
+            border-top-right-radius: 4px;
+    		border-top-left-radius: 4px;
             font-size: 12px;
+            font-weight: 200;
     	}
 
-    	nav li:hover{
+        nav ul p{
+            margin: 0px -6px;
+            padding: 6px;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            /*border: 1px solid red;*/
+        }
+
+        nav p a{
+            color: #222222;
+        }
+
+        nav li .dropdown{
+           position: absolute;
+           margin-left: -6px;
+           display: none;
+           background-color: #507AA5;
+           border-radius: 4px;
+           border-top-left-radius: 0px;
+           -moz-box-shadow: 1px 1px #555555;
+            -webkit-box-shadow: 1px 1px #555555;
+            box-shadow: 1px 1px  #555555;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#555555')";
+            filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#555555');
+        }
+
+        .dropdown li{
+            display: block;    
+            font-size: 11px; 
+            border-radius: 4px;          
+        }
+
+        .dropdown li a{
+            color: #EFEFEF;
+            font-weight: 100;
+            display: block;
+            padding: 7px 6px;
+            border-radius: 4px; 
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+
+    	nav li:hover, nav li:hover a{
     		background-color: #507AA5;
-    		color: white;
+            color: #EFEFEF;
     	}
 
-        nav li span{
-            color: #AAAAAA;
-            
+        nav p:hover, nav p:hover a, .dropdown li:hover, .dropdown li:hover a{
+            background-color: #466A90;
+        }
+
+        .dropdown li img{
+            margin-top: -2px;
+            float: right;
         }
 
     	nav form{
     		display:inline-block;
     		float:right;
-    		margin-top: 8px; /* find a different way to align to bottom */
+    		 /* find a different way to align to bottom */
     		/*width: 20%;*/
 
     	}
 
     	nav input[type=search]{
-    		margin-right: -3px;
-    		/*outline: none;*/
-    		border: 1px solid gray;
-    		border-top-left-radius: 5px 5px;
-			border-bottom-left-radius: 5px 5px;
-			padding: 7px;
+            height: 24px;
+            width: 180px;
+    		margin-right: -4px;
+    		outline: none;
+    		border: 1px solid #CCCCCC;
+    		border-top-left-radius: 6px;
+			border-bottom-left-radius: 6px;
+			padding: 2px 4px;
+            font-size: 12px;
+           /* -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;*/
     	}
 
     	nav input[type=submit]{
+            height: 30px;
     		background-color: #507AA5;
     		color: #FFFFFF;
             font-weight: 100;
-            letter-spacing: 1.5px;
             text-align: center;
-    		border-top-right-radius: 4px;
-    		border-bottom-right-radius: 4px;
-            border: solid 1px #0076a3;
-			padding: 8px 10px;
-
-			
-
+    		border-top-right-radius: 6px;
+    		border-bottom-right-radius: 6px;
+            border: 0px;
+			padding: 8px 16px 6px 16px;
+            letter-spacing: 0.05em;
     	}
 
-    	.blue-backgroun:hover{
+    	.blue-background:hover{
     		/*background-color: rgb(70, 106, 144);*/
     		background-color: #466A90;
     	}
@@ -128,13 +199,13 @@
     	.left-content{
     		float: left;
     		border-right: 1px solid #DFDFDF; 
-    		width: 70%;
-    		margin-right: 1%;
+    		width: 69.6%;
+    		/*margin-right: 1%;*/
     		/*min-width:300px;*/
     	}
 
 			section{
-				margin-right: 4%;
+				margin-right: 5%;
 				margin-bottom: 20px;
 				padding: 0px;
 				padding-bottom: 2%;
@@ -149,7 +220,7 @@
 	    		display: inline;
 	    		border: 1px solid #DFDFDF;
 	    		padding: 0.5%;
-	    		width: 22%;
+	    		width: 20%;
 
 	    	}
 	    	section .image-box img{
@@ -166,10 +237,10 @@
             }
 
 	    	section .headings {
-	    		margin-left: 4%;
+	    		/*margin-left: 4%;*/
 	    		float: right;
 	    		display: inline-block;
-	    		max-width: 69%;  		
+	    		max-width: 75%;  		
 	    	}
 	    	.headings h2{
 	    		/*width:80%;*/
@@ -188,6 +259,10 @@
 	    		display: block;
 	    	}
 
+            .headings img{
+                margin: -4px;
+            }
+
 	    	.article-info span.first-span{
 	    		float: left;
 	    	}
@@ -202,9 +277,9 @@
 
 
     	.boxed-content{
-    		float: right;
-    		width: 26.5%;
-    		margin-left: 2%;
+    	   float: right;
+    	   width: 27%;
+
     	}
 
     	.boxed-content .tab-box{
