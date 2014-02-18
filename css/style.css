@@ -20,7 +20,6 @@ p, ul, li, div, .section, a, span, .nav{
     padding: 0;
 }
 
-
 a{
 	text-decoration: none;
 	color: #5E7D9D; /*light blue*/
@@ -45,11 +44,6 @@ a:hover{color: #2E4E6E;}
     margin: 1.6% auto;
 	overflow: hidden;
 }
-
-.clear{
-	clear:both;
-}
-
 
 /* .nav BAR STYLING ======================== */
 
