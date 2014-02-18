@@ -1,0 +1,23 @@
+I tried to replicate an image which is under the name sample.png. The prompt asked for a static page but I added in javascript for the tabs anyways. I also tried to make it responsive by using % for widths and margins, and a media query. I'm not really sure what to say about this assignment so I'll just list out some notes.
+
+- IE8 gave me a lot of problems because I usually don't build pages that are complient with IE8. I avoided certain things to please IE8, while I also kept some things that don't work with IE8
+
+Properties I included that work:
+- I typically like to use n-th child but since there was no support for this, I just used more class names
+- I was using nav and section tags but changed these to div class="nav" and div class="section" because IE8 doesn't support new HTML 5 tags. This was a huge problem because I didn't realize nav was new and my dropdown menus weren't working because they were nested inside a nav. I tried everything to fix it before I realized this. I could have used modernizer but I chose not to.
+- I used normalize.css, a public stylesheet, for improved cross-browser rendering
+
+Properties that don't work with IE8 but I kept anyways:
+- border-radius : It was just easier to use it and let it show up as blocky in IE8
+- media-queries : In my opinion its worth having media queries for smaller viewports
+
+Validation errors:
+- When validating CSS I am aware that I get errors because of a filter property that I use to give shading to the dropdowns but I don't think this is an issue. I also did a scan report on modern.ie and it turned out pretty good.
+
+Some iffy things that I did:
+- Judging by how everything was spaced and margined in the sample image, the original site looks like it was built using a grid system. I chose not to use a grid system which probably caused more harm than good
+- I typically use pixels for fonts, widths, margins etc but I decided to use ems instead because I read it was better for responsive pages and because I wanted to go beyond my comfort zone.
+- I did not use sass because I am not familiar with it enough but I would want to organize my css better next time
+- I wasn't sure what tags I should use for the tabs of the dropdown menus (h3? p? span?)
+- The navbar looks messy when you resize the window and I COULD have done something about this but I had to draw the line somewhere!
+
