@@ -20,4 +20,4 @@ Some iffy things that I did:
 - I did not use sass because I am not familiar with it enough but I would want to organize my css better next time
 - I wasn't sure what tags I should use for the tabs of the dropdown menus (h3? p? span?)
 - The navbar looks messy when you resize the window and I COULD have done something about this but I had to draw the line somewhere!
-
+- (2/18/14) - I just found out <meta charset="utf-8"> and <!Doctype> is formatted for html5
